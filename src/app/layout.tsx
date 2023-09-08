@@ -1,12 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import Navbar from './components/Navbar'
+import Skills from './components/Skills'
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Pritam Gupta',
-  description: 'Hello, I am Pritam Gupta and I am a full-stack web developer.',
+  description: 'Hello, I am Pritam Gupta and I am a Undergrade (BCA) student learing full-stack web developer.',
 }
 
 export default function RootLayout({
@@ -16,9 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className='relative top-0'>global</div>
-        {children}
+      <body className='max-w-[1200px] m-auto'>
+        {/* <div className="w-full h-full"> */}
+        <Navbar/>
+        {/* <div className="mx-6"> */}
+          {children}
+          {/* </div> */}
+        {/* </div> */}
       </body>
     </html>
   )
