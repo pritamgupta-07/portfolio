@@ -11,6 +11,12 @@ const config: Config = {
       colors: {
         'primary': '#0e0e0f',
         'secondary': '#ae45ff',
+      },
+      dropShadow: {
+        'custom': '0 0 8px #ae45ff ',
+      },
+      boxShadow: {
+        'button': '0 0px 12px 0px #ae45ff'
       }
     },
   },
