@@ -12,7 +12,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
       </div>
       <div className="hidden md:block">
         <ul className="w-full h-full flex justify-center items-center gap-5 px-6 text-gray-200 font-[500] text-lg">
-          <NavbarOptions />
+          <NavbarOptions/>
         </ul>
       </div>
       <MobileNavbar />

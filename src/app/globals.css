@@ -15,6 +15,12 @@ html, body {
     font-family: 'Libre Franklin', sans-serif;
 }
 
+@layer components {
+    .active-nav {
+      @apply h-[2px] scale-y-75 bg-secondary rounded-md origin-left duration-300 group-hover:scale-x-100
+    }
+  }
+
 ::-webkit-scrollbar {
     max-width: 10px;
     height: auto;

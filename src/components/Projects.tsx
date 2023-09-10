@@ -5,7 +5,7 @@ interface ProjectsProps {
 }
 
 const Projects: FC<ProjectsProps> = ({}) => {
-  return <div id='projects'>Projects</div>
+  return <div id='projects'className='w-full min-h-full'>Projects</div>
 }
 
 export default Projects

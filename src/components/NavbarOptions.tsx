@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import {
   CodeBracketIcon,
   CommandLineIcon,
@@ -14,63 +14,94 @@ interface NavbarOptionsProps {
 }
 
 const NavbarOptions: FC<NavbarOptionsProps> = ({ handleActiveMenu }) => {
-  const [hash, setHash] = useState("");
-  // const url = window.location.href;
- useEffect(()=>{
-  if (typeof window !== "undefined") {
-  window.addEventListener("hashchange", () => {
-    setHash(window.location.hash)
-  });
-}
-},[setHash])
-console.log(hash);
+  const [hash, setHash] = useState<string>("#home");
+
+  const activeNav = (active: string) => {
+    if (handleActiveMenu) {
+      handleActiveMenu();
+    }
+
+    setHash(active);
+  };
+
   return (
     <>
       <li>
         <div className="group">
-          <a href="#home" onClick={handleActiveMenu} className="flex">
+          <a href="#home" onClick={() => activeNav("#home")} className="flex">
             <HomeIcon className="text-secondary w-6 h-6 mr-2" />
             Home
           </a>
-          <div className="h-[2px] scale-y-75 bg-secondary rounded-md scale-x-0 origin-left duration-300 group-hover:scale-x-100"></div>
+          <div
+            className={`md:active-nav ${
+              hash === "#home" ? "scale-x-100" : "scale-x-0"
+            }`}
+          ></div>
         </div>
       </li>
       <li>
         <div className="group">
-          <a href="#about" onClick={handleActiveMenu} className="flex">
+          <a href="#about" onClick={() => activeNav("#about")} className="flex">
             <UserIcon className="text-secondary w-6 h-6 mr-2" />
             About
           </a>
-          <div className="h-[2px] scale-y-75 bg-secondary scale-x-0 rounded-md origin-left duration-300 group-hover:scale-x-100"></div>
+          <div
+            className={`md:active-nav ${
+              hash === "#about" ? "scale-x-100" : "scale-x-0"
+            }`}
+          ></div>
         </div>
       </li>
       <li>
         <div className="group h-full">
-          <a href="#skills" onClick={handleActiveMenu} className="flex">
+          <a
+            href="#skills"
+            onClick={() => activeNav("#skills")}
+            className="flex"
+          >
             <CodeBracketIcon className="text-secondary w-6 h-6 mr-2" />
             Skills
           </a>
-          <div className="h-[2px] scale-y-75 bg-secondary rounded-md scale-x-0 origin-left duration-300 group-hover:scale-x-100"></div>
+          <div
+            className={`md:active-nav ${
+              hash === "#skills" ? "scale-x-100" : "scale-x-0"
+            }`}
+          ></div>
         </div>
       </li>
       <li>
         <div className="group">
-          <a href="#projects" onClick={handleActiveMenu} className="flex">
+          <a
+            href="#projects"
+            onClick={() => activeNav("#projects")}
+            className="flex"
+          >
             <CommandLineIcon className="text-secondary w-6 h-6 mr-2" />
             Projects
           </a>
-          <div className="h-[2px] scale-y-75 bg-secondary scale-x-0 rounded-md origin-left duration-300 group-hover:scale-x-100"></div>
+          <div
+            className={`md:active-nav ${
+              hash === "#projects" ? "scale-x-100" : "scale-x-0"
+            }`}
+          ></div>
         </div>
       </li>
       <li>
-        <a
-          href="#contact"
-          onClick={handleActiveMenu}
-          className="flex md:bg-secondary md:rounded-md transition-all duration-200 md:hover:scale-105 md:px-3 md:py-2"
-        >
-          <EnvelopeIcon className="text-secondary md:text-white w-6 h-6 mr-2" />
-          Contact
-        </a>
+        <div className="group">
+          <a
+            href="#contact"
+            onClick={() => activeNav("#contact")}
+            className="flex md:bg-secondary md:rounded-md transition-all duration-200 md:hover:scale-105 md:px-3 md:py-2"
+          >
+            <EnvelopeIcon className="text-secondary md:text-white w-6 h-6 mr-2" />
+            Contact
+          </a>
+          <div
+            className={`md:active-nav md:hidden ${
+              hash === "#contact" ? "scale-x-100" : "scale-x-0"
+            }`}
+          ></div>
+        </div>
       </li>
     </>
   );

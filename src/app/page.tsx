@@ -3,6 +3,7 @@ import Contact from "../components/Contact";
 import { FC } from "react";
 import Image from "next/image";
 import About from "../components/About";
+import Projects from "@/components/Projects";
 
 interface Home {}
 
@@ -79,6 +80,10 @@ const Home: FC<Home> = () => {
           />
         </div>
       </div>
+
+      {/* Projects section */}
+
+      <Projects/>
 
       {/* About section */}
       <About/>
