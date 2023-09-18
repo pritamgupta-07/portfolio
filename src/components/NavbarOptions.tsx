@@ -41,13 +41,17 @@ const NavbarOptions: FC<NavbarOptionsProps> = ({ handleActiveMenu }) => {
       </li>
       <li>
         <div className="group">
-          <a href="#about" onClick={() => activeNav("#about")} className="flex">
-            <UserIcon className="text-secondary w-6 h-6 mr-2" />
-            About
+          <a
+            href="#projects"
+            onClick={() => activeNav("#projects")}
+            className="flex"
+          >
+            <CommandLineIcon className="text-secondary w-6 h-6 mr-2" />
+            Projects
           </a>
           <div
             className={`md:active-nav ${
-              hash === "#about" ? "scale-x-100" : "scale-x-0"
+              hash === "#projects" ? "scale-x-100" : "scale-x-0"
             }`}
           ></div>
         </div>
@@ -71,17 +75,13 @@ const NavbarOptions: FC<NavbarOptionsProps> = ({ handleActiveMenu }) => {
       </li>
       <li>
         <div className="group">
-          <a
-            href="#projects"
-            onClick={() => activeNav("#projects")}
-            className="flex"
-          >
-            <CommandLineIcon className="text-secondary w-6 h-6 mr-2" />
-            Projects
+          <a href="#about" onClick={() => activeNav("#about")} className="flex">
+            <UserIcon className="text-secondary w-6 h-6 mr-2" />
+            About
           </a>
           <div
             className={`md:active-nav ${
-              hash === "#projects" ? "scale-x-100" : "scale-x-0"
+              hash === "#about" ? "scale-x-100" : "scale-x-0"
             }`}
           ></div>
         </div>

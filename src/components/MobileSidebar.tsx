@@ -4,6 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import { FC, Fragment, useState } from "react";
 import NavbarOptions from "./NavbarOptions";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
 interface MobileNavbarProps {}
 
@@ -19,22 +20,9 @@ const MobileNavbar: FC<MobileNavbarProps> = ({}) => {
       {/* Menu Icon */}
       <div
         onClick={handleMenu}
-        className="flex justify-center items-center  text-gray-200 mx-6 md:hidden"
+        className="flex justify-center items-center  text-gray-200 lg:hidden"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
+        <Bars3Icon className="h-8 w-8" />
       </div>
 
       {/* sidebar panel */}
@@ -88,14 +76,14 @@ const MobileNavbar: FC<MobileNavbarProps> = ({}) => {
                     </Transition.Child>
                     <div className="flex h-full flex-col overflow-y-scroll bg-primary py-6 shadow-xl">
                       <div className="px-4 sm:px-6">
-                        <Dialog.Title className="text-base font-semibold leading-6 text-gray-200">
-                          Logo
+                        <Dialog.Title className="leading-6 text-secondary text-2xl font-[700]">
+                          PG
                         </Dialog.Title>
                       </div>
-                      <div className="relative mt-6 flex-1 px-4 sm:px-6">
+                      <div className="relative mt-8 flex-1 px-4 sm:px-6">
                         {/* Panel content */}
                         <ul className="w-full h-full flex flex-col justify-start items-start gap-6 px-6 text-gray-200 font-[500] text-lg">
-                        <NavbarOptions handleActiveMenu={handleMenu}/>
+                          <NavbarOptions handleActiveMenu={handleMenu} />
                         </ul>
                       </div>
                     </div>

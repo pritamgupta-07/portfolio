@@ -16,10 +16,15 @@ const config: Config = {
         'custom': '0 0 8px #ae45ff ',
       },
       boxShadow: {
-        'button': '0 0px 12px 0px #ae45ff'
+        'button': '0 0px 8px 0px #ae45ff'
+      },
+      screens: {
+        'sm': '480px',
+        'lg': '968px',
       }
     },
   },
+  
   plugins: [],
 }
 export default config

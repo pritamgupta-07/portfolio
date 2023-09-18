@@ -6,12 +6,12 @@ interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
   return (
-    <nav className="w-full max-w-[1200px] h-20 flex justify-between fixed z-40 bg-transparent">
-      <div className="flex justify-start px-6 items-center text-secondary w-full h-full">
-        logo
+    <nav className="w-full max-w-[1340px] h-20 flex justify-between fixed z-40 bg-transparent px-6 md:px-8">
+      <div className="flex justify-start items-center text-secondary w-full h-full font-[700] text-2xl">
+        PG
       </div>
-      <div className="hidden md:block">
-        <ul className="w-full h-full flex justify-center items-center gap-5 px-6 text-gray-200 font-[500] text-lg">
+      <div className="hidden lg:block">
+        <ul className="w-full h-full flex justify-center items-center gap-6 text-gray-200 font-[400] text-lg">
           <NavbarOptions/>
         </ul>
       </div>
