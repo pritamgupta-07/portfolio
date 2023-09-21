@@ -1,10 +1,7 @@
 import { backEnd, frontEnd, other } from "@/data/skills";
 import Image from "next/image";
-import { FC } from "react";
 
-interface SkillsProps {}
-
-const Skills: FC<SkillsProps> = ({}) => {
+const Skills = () => {
   return (
     <div id="skills" className="w-full">
       <div className="pt-16">

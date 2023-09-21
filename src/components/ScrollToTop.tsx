@@ -4,7 +4,7 @@ import { ChevronDoubleUpIcon } from "@heroicons/react/20/solid";
 import { useEffect, useState } from "react";
 
 
-const ScrollToTop = ({}) => {
+const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });

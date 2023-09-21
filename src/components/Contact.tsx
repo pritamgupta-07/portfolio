@@ -1,10 +1,7 @@
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { FC } from "react";
 
-interface SkillsProps {}
-
-const Skills: FC<SkillsProps> = ({}) => {
+const Contact = () => {
   return (
     <div id="contact" className="w-full pb-10">
       <div className="pt-16 mb-10">
@@ -13,8 +10,11 @@ const Skills: FC<SkillsProps> = ({}) => {
           <span className="text-secondary">better.</span>
         </h3>
       </div>
-      <div className=" w-full h-full lg:flex lg:items-center space-y-5">
-        <div className="left w-full lg:mr-6">
+      <div className=" w-full h-full lg:flex lg:items-center space-y-5 gap-12">
+
+        {/* left block */}
+
+        <div className="left w-full">
           <Image
             src="/connect.svg"
             width={968}
@@ -22,7 +22,10 @@ const Skills: FC<SkillsProps> = ({}) => {
             alt="connect-with-me"
           />
         </div>
-        <div className="right w-full space-y-5">
+
+        {/* right block */}
+
+        <div className="right w-full space-y-5 tracking-wide ">
           <p className="text-gray-400 leading-8 md:leading-10">
             Thank you for visiting! This is your direct line to reach me.
             Whether you have a project in mind, a question about web
@@ -114,4 +117,4 @@ const Skills: FC<SkillsProps> = ({}) => {
   );
 };
 
-export default Skills;
+export default Contact;

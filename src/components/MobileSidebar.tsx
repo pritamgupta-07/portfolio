@@ -2,13 +2,11 @@
 
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/20/solid";
-import { FC, Fragment, useState } from "react";
+import { Fragment, useState } from "react";
 import NavbarOptions from "./NavbarOptions";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 
-interface MobileNavbarProps {}
-
-const MobileNavbar: FC<MobileNavbarProps> = ({}) => {
+const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleMenu = () => {

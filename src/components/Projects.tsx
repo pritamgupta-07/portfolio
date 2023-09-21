@@ -4,11 +4,8 @@ import {
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { FC } from "react";
 
-interface ProjectsProps {}
-
-const Projects: FC<ProjectsProps> = ({}) => {
+const Projects = () => {
   return (
     <div id="projects" className="flex justify-center items-center w-full ">
       <div className="w-full h-full mt-10">
@@ -23,14 +20,14 @@ const Projects: FC<ProjectsProps> = ({}) => {
             <div
               key={id}
               className={`flex my-14 md:justify-between flex-col ${
-                id % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-              }  items-center md:items-center min-w-full  min-h-full duration-200 md:hover:translate-y-2`}
+                id % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
+              }  items-center lg:items-center min-w-full  min-h-full gap-12 duration-200 md:hover:-translate-y-2`}
             >
               {/* left block */}
 
-              <div className="left w-full flex justify-center items-center ">
+              <div className="left w-full flex justify-center items-center drop-shadow-custom ">
                 <Image
-                  className="w-full h-full max-h-[400px] object-cover rounded-lg border-2 border-secondary"
+                  className="w-full h-full max-h-[400px] rounded-lg border-2 border-secondary"
                   alt={project.name}
                   width={400}
                   height={400}
@@ -40,16 +37,12 @@ const Projects: FC<ProjectsProps> = ({}) => {
 
               {/* right block */}
 
-              <div
-                className={`right w-full ${
-                  id % 2 === 0 ? "md:pr-8" : "md:pl-8"
-                }`}
-              >
-                <div className="flex flex-col items-start w-full mt-6 md:mt-0">
+              <div className="right w-full">
+                <div className="flex flex-col items-start w-full mt-6 md:mt-0 tracking-wide ">
                   <h3 className="text-lg text-secondary font-semibold leading-10 ">
                     {project.name}
                   </h3>
-                  <p className="text-gray-400">{project.description}</p>
+                  <p className="text-gray-400 pb-4">{project.description}</p>
                   <div className="text-gray-400">
                     <ol>
                       {project.keyFeatures.map((feature) => {

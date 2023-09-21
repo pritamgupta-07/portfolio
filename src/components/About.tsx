@@ -1,19 +1,16 @@
 import { LinkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { FC } from "react";
 
-interface AboutProps {}
-
-const About: FC<AboutProps> = ({}) => {
+const About = () => {
   return (
     <div id="about" className="w-full mb-8">
       <div className="text-gray-200 text-2xl font-bold pt-16 pb-10">
         But wait... <span className="text-secondary">Who am I ?</span>
       </div>
-      <div className="lg:flex justify-center items-center ">
-        {/* left section */}
+      <div className="lg:flex justify-center items-center gap-12">
+        {/* left block */}
 
-        <div className="left w-full h-full mb-8 lg:mr-6">
+        <div className="left w-full h-full mb-8">
           <Image
             src="/about-me.svg"
             className=""
@@ -23,10 +20,10 @@ const About: FC<AboutProps> = ({}) => {
           />
         </div>
 
-        {/* right section */}
+        {/* right block */}
 
         <div className="right w-full space-y-8">
-          <div className="text-lg  text-gray-400 leading-8 space-y-6">
+          <div className="text-lg  text-gray-400 leading-8 space-y-6 tracking-wide ">
             <p>
               Hello, I&apos;m Pritam Gupta, a dedicated undergraduate student
               with a profound interest in web development. Currently pursuing my
