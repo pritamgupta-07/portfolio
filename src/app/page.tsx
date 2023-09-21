@@ -5,10 +5,12 @@ import About from "../components/About";
 import Projects from "@/components/Projects";
 import Home from "@/components/Home";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const Main = () => {
   return (
-    <main className="h-full w-full px-6 md:px-8">
+    <main className="h-full w-full px-6 md:px-8 ">
+      {/* <Navbar/> */}
       <Home />
       {/* Projects section */}
 

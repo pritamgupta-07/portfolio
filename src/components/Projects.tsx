@@ -4,7 +4,6 @@ import {
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import Link from "next/link";
 import { FC } from "react";
 
 interface ProjectsProps {}
@@ -23,15 +22,15 @@ const Projects: FC<ProjectsProps> = ({}) => {
           return (
             <div
               key={id}
-              className={`flex my-10 md:justify-between flex-col ${
+              className={`flex my-14 md:justify-between flex-col ${
                 id % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-              }  items-center md:items-center min-w-full  min-h-full duration-200 md:hover:translate-x-2`}
+              }  items-center md:items-center min-w-full  min-h-full duration-200 md:hover:translate-y-2`}
             >
               {/* left block */}
 
-              <div className="left flex justify-center items-center ">
+              <div className="left w-full flex justify-center items-center ">
                 <Image
-                  className="h-[300px] w-[300px] rounded-md border-2 border-secondary"
+                  className="w-full h-full max-h-[400px] object-cover rounded-lg border-2 border-secondary"
                   alt={project.name}
                   width={400}
                   height={400}
@@ -42,8 +41,8 @@ const Projects: FC<ProjectsProps> = ({}) => {
               {/* right block */}
 
               <div
-                className={`right min-w-[300px] md:max-w-[600px] flex-1 ${
-                  id % 2 === 0 ? "md:pr-6" : "md:pl-6"
+                className={`right w-full ${
+                  id % 2 === 0 ? "md:pr-8" : "md:pl-8"
                 }`}
               >
                 <div className="flex flex-col items-start w-full mt-6 md:mt-0">
@@ -70,26 +69,25 @@ const Projects: FC<ProjectsProps> = ({}) => {
                   </div>
                 </div>
                 <div className="my-5 flex justify-between md:max-w-[300px]">
-                  <Link target="_blank" href="#">
-                    <button
-                      type="button"
-                      className="text-gray-200 bg-secondary px-3 py-2 rounded-md hover:shadow-button duration-200 hover:scale-105 flex"
-                    >
-                      Have a look{" "}
-                      <span>
-                        {" "}
-                        <ArrowTopRightOnSquareIcon className="h-5 w-5 ml-2" />{" "}
-                      </span>
-                    </button>
-                  </Link>
-                  <Link target="_blank" href="#">
-                    <button
-                      type="button"
-                      className="text-gray-200 hover:text-secondary rounded-md border hover:border-secondary px-3 py-2 duration-200"
-                    >
-                      Source Code
-                    </button>
-                  </Link>
+                  <a
+                    href={project.preview}
+                    target="_blank"
+                    className="text-gray-200 bg-secondary px-3 py-2 rounded-md hover:shadow-button duration-200 hover:scale-105 flex"
+                  >
+                    Have a look{" "}
+                    <span>
+                      {" "}
+                      <ArrowTopRightOnSquareIcon className="h-5 w-5 ml-2" />{" "}
+                    </span>
+                  </a>
+
+                  <a
+                    href={project.sourceCode}
+                    target="_blank"
+                    className="text-gray-200 hover:text-secondary rounded-md border hover:border-secondary px-3 py-2 duration-200"
+                  >
+                    Source Code
+                  </a>
                 </div>
               </div>
             </div>

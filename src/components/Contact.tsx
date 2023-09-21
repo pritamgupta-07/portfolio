@@ -14,7 +14,7 @@ const Skills: FC<SkillsProps> = ({}) => {
         </h3>
       </div>
       <div className=" w-full h-full lg:flex lg:items-center space-y-5">
-        <div className="left lg:mr-6">
+        <div className="left w-full lg:mr-6">
           <Image
             src="/connect.svg"
             width={968}
@@ -36,7 +36,7 @@ const Skills: FC<SkillsProps> = ({}) => {
                 href="mailto:pritampg2907@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-200 text-xl flex items-center underline"
+                className="text-gray-200 text-xl flex items-center underline hover:text-secondary duration-200"
               >
                 <EnvelopeIcon className="h-8 w-8 mr-5 text-secondary" />
                 pritampg2907@gmail.com
@@ -48,60 +48,60 @@ const Skills: FC<SkillsProps> = ({}) => {
             <div className="flex flex-wrap gap-5 justify-between max-w-[600px]">
               <p>
                 <a
-                  href="https://twitter.com/pritam_stack"
-                  className="email text-gray-200 flex items-center gap-3"
+                  href="https://github.com/pritamgupta-07"
+                  className="text-gray-200 flex items-center gap-3 hover:scale-105 duration-200"
                   target="_blank"
                 >
                   <Image
                     src="/github.svg"
                     width={32}
                     height={32}
-                    alt="connect-with-me"
+                    alt="pritam_gupta_github"
                   />
                   GitHub
                 </a>
               </p>
               <p>
                 <a
-                  href="https://twitter.com/pritam_stack"
-                  className="email text-gray-200 flex items-center gap-3"
+                  href="https://twitter.com/twt_pritamgupta"
+                  className="text-gray-200 flex items-center gap-3 hover:scale-105 duration-200"
                   target="_blank"
                 >
                   <Image
                     src="/twitter.svg"
                     width={32}
                     height={32}
-                    alt="connect-with-me"
+                    alt="pritam_gupta_twitter"
                   />
                   Twitter
                 </a>
               </p>
               <p>
                 <a
-                  href="https://twitter.com/pritam_stack"
-                  className="email text-gray-200 flex items-center gap-3"
+                  href="https://www.linkedin.com/in/pritam-gupta-1b65b3253"
+                  className="text-gray-200 flex items-center gap-3 hover:scale-105 duration-200"
                   target="_blank"
                 >
                   <Image
                     src="/linkedin.svg"
                     width={32}
                     height={32}
-                    alt="connect-with-me"
+                    alt="pritam_gupta_linkedin"
                   />
                   LinkedIn
                 </a>
               </p>
               <p>
                 <a
-                  href="https://twitter.com/pritam_stack"
-                  className="email text-gray-200 flex items-center gap-3"
+                  href="https://discord.com/users/pritam_gupta"
+                  className="text-gray-200 flex items-center gap-3 hover:scale-105 duration-200"
                   target="_blank"
                 >
                   <Image
                     src="/discord.svg"
                     width={32}
                     height={32}
-                    alt="connect-with-me"
+                    alt="pritam_gupta_discord"
                   />
                   Discord
                 </a>
