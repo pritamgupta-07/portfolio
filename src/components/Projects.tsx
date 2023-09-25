@@ -1,9 +1,12 @@
+'use client'
+
 import projects from "@/data/projects";
 import {
   ArrowTopRightOnSquareIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
@@ -15,17 +18,27 @@ const Projects = () => {
           </h3>
           <h3 className="text-secondary text-2xl font-bold"> I have done.</h3>
         </div>
+
+        {/* projects start */}
+
         {projects.map(({ id, ...project }) => {
           return (
             <div
               key={id}
               className={`flex my-14 md:justify-between flex-col ${
                 id % 2 === 0 ? "lg:flex-row-reverse" : "lg:flex-row"
-              }  items-center lg:items-center min-w-full  min-h-full gap-12 duration-200 md:hover:-translate-y-2`}
+              }  items-center lg:items-center min-w-full  min-h-full gap-12 `}
             >
               {/* left block */}
 
-              <div className="left w-full flex justify-center items-center drop-shadow-custom ">
+              <motion.div 
+                  initial={{ opacity: 0, x: id % 2 === 0 ? 80 : -80 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 1,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
+                className="left w-full flex justify-center items-center drop-shadow-custom ">
                 <Image
                   className="w-full h-full max-h-[400px] rounded-lg border-2 border-secondary"
                   alt={project.name}
@@ -33,11 +46,18 @@ const Projects = () => {
                   height={400}
                   src={project.image}
                 />
-              </div>
+              </motion.div>
 
               {/* right block */}
 
-              <div className="right w-full">
+              <motion.div 
+                  initial={{ opacity: 0, x:  id % 2 === 0 ? -80 : 80 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 1,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
+                className="right w-full">
                 <div className="flex flex-col items-start w-full mt-6 md:mt-0 tracking-wide ">
                   <h3 className="text-lg text-secondary font-semibold leading-10 ">
                     {project.name}
@@ -82,7 +102,7 @@ const Projects = () => {
                     Source Code
                   </a>
                 </div>
-              </div>
+              </motion.div>
             </div>
           );
         })}

@@ -1,5 +1,8 @@
+"use client";
+
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -11,21 +14,36 @@ const Contact = () => {
         </h3>
       </div>
       <div className=" w-full h-full lg:flex lg:items-center space-y-5 gap-12">
-
         {/* left block */}
 
-        <div className="left w-full">
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 1,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          className="left w-full"
+        >
           <Image
             src="/connect.svg"
             width={968}
             height={500}
             alt="connect-with-me"
           />
-        </div>
+        </motion.div>
 
         {/* right block */}
 
-        <div className="right w-full space-y-5 tracking-wide ">
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 1,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          className="right w-full space-y-5 tracking-wide "
+        >
           <p className="text-gray-400 leading-8 md:leading-10">
             Thank you for visiting! This is your direct line to reach me.
             Whether you have a project in mind, a question about web
@@ -111,7 +129,7 @@ const Contact = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
