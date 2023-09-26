@@ -44,7 +44,7 @@ const Home = () => {
           <div className="social-media-links">
             <ul className="flex gap-6">
               <li>
-                <a href="https://www.linkedin.com/in/pritamgupta-dev">
+                <a href="https://www.linkedin.com/in/pritamgupta-dev" target="_blank">
                   <Image
                     width={100}
                     height={100}
@@ -55,7 +55,7 @@ const Home = () => {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/pritamgupta-07">
+                <a href="https://github.com/pritamgupta-07" target="_blank">
                   <Image
                     width={100}
                     height={100}
@@ -66,7 +66,7 @@ const Home = () => {
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/twt_pritamgupta">
+                <a href="https://twitter.com/twt_pritamgupta" target="_blank">
                   <Image
                     width={100}
                     height={100}
