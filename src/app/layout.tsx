@@ -19,10 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="max-w-[1340px] m-auto">
+      <body className="max-w-[1340px] m-auto ">
         <Navbar />
         <ScrollToTop />
+        <div className="overflow-x-hidden">
         {children}
+        </div>
       </body>
     </html>
   );

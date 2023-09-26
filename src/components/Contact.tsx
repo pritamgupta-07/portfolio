@@ -99,7 +99,7 @@ const Contact = () => {
               </p>
               <p>
                 <a
-                  href="https://www.linkedin.com/in/pritam-gupta-1b65b3253"
+                  href="https://www.linkedin.com/in/pritamgupta-dev"
                   className="text-gray-200 flex items-center gap-3 hover:scale-105 duration-200"
                   target="_blank"
                 >

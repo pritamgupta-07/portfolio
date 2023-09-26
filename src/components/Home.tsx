@@ -30,9 +30,9 @@ const Home = () => {
           </div>
           {/* resume download and contact button */}
           <div className="flex justify-start items-center mt-8 mb-12">
-            <button className="border transition-all duration-300 hover:border-secondary mr-6 px-3 py-2 rounded-md">
+            <a href="/PritamGuptaResume.pdf" download="PritamGuptaResume.pdf" className="border transition-all duration-300 hover:border-secondary mr-6 px-3 py-2 rounded-md">
               Download Resume
-            </button>
+            </a>
             <a
               href="#projects"
               className="px-3 py-2 bg-secondary font-bold rounded-md hover:scale-110 hover:shadow-button transition-all duration-200 "

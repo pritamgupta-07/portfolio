@@ -12,7 +12,6 @@ html, body {
     padding: 0;
     background-color: #0e0e0f;
     scroll-behavior: smooth;
-    overflow-x: hidden;
     font-family: 'Libre Franklin', sans-serif;
 }
 

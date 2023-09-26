@@ -1,7 +1,6 @@
 interface Skills {
     name: string
     src: string
-    style?: string
 }
 
 export const frontEnd: Skills[] = [
@@ -10,7 +9,7 @@ export const frontEnd: Skills[] = [
     {name: 'JavaScript', src: 'javascript.svg'},
     {name: 'TypeScript', src: 'typescript.svg'},
     {name: 'ReactJs', src: 'reactjs.svg'},
-    {name: 'NextJs', src: 'nextjs.svg', style: 'bg-white border rounded-full'},
+    {name: 'NextJs', src: 'nextjs.svg'},
     {name: 'Material UI', src: 'material-ui.svg'},
     {name: 'Tailwind CSS', src: 'tailwind-css.svg'},
 ]
@@ -20,7 +19,7 @@ export const backEnd: Skills[] = [
     {name: 'ExpressJs', src: 'expressjs.svg'},
     {name: 'MongoDB', src: 'mongodb.svg'},
     {name: 'Redis', src: 'redis.svg'},
-    {name: 'Postman', src: 'postman.svg', style: 'bg-white border rounded-full'},
+    {name: 'Postman', src: 'postman.svg'},
 ]
 
 export const other: Skills[] = [

@@ -3,13 +3,12 @@
 import { ChevronDoubleUpIcon } from "@heroicons/react/20/solid";
 import { useEffect, useState } from "react";
 
-
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // Show/hide the button based on scroll position
+  // Show or hide the button based on scroll position
   const handleScroll = () => {
     if (window.scrollY > 100) {
       setIsVisible(true);
@@ -19,10 +18,8 @@ const ScrollToTop = () => {
   };
 
   useEffect(() => {
-    // Add a scroll event listener when the component mounts
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
